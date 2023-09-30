@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-Apps</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    keyframes: {
+                        'show': {
+                            '0%': { transform: 'scale(0)' },
+                            '100%': { transform: 'scale(1)' },
+                        },
+                    },
+                    animation: {
+                        'show': 'show 0.4s ',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container w-11/12 h-screen m-auto flex justify-center content-center">
+        <div class="content-container w-8/12 rounded-xl min-h-[500px]  mt-20 mb-10">
+            <div class="title w-full h-[80px] flex  rounded-xl box-border p-5">
+                <div class="h-[50px] w-[50px]">
+                    <img src="img/weather_apps_logo.png" alt="" class="w-full h-full ">
+                </div>
+                <div class=" font-mono text-3xl font-bold p-4 text-gray-800 tracking-tighter ">
+                    <h1 class="">Weather Apps</h1>
+                </div>
+            </div>
+            <div
+                class="content bg-sky-300 w-full rounded-xl h-[700px] flex content-center m-auto flex-col flex-wrap box-border relative">
+                <div class="search w-2/4 bg-sky-800 h-[50px] rounded-xl p-2 flex justify-center m-3 gap-2 ">
+                    <input type="text"
+                        class="w-[80%] rounded-lg focus:outline-none text-center font-semibold focus:ring focus:border-sky-300 focus:p-3 focus:text-center focus:font-semibold"
+                        id="searchInput">
+                    <button id="searchButton"><i
+                            class="fa-solid fa-magnifying-glass text-sky-300 text-2xl hover:text-3xl"></i></button>
+                </div>
+                <div class="weather-data w-auto min-h-[500px] flex flex-col text-sky-950 rounded-2xl ">
+                </div>
+                <footer class="w-auto flex justify-center absolute right-0 left-0 bottom-0 m-5">
+                    <small class="font-semibold">
+                        Created by Amstrong © 2023 . All Rights Reserved.
+                    </small>
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
