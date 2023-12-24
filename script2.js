@@ -1,6 +1,7 @@
 import fetchingData from "./fetching.js";
 import generateWeatherUI from "./weatherCard.js";
 import generatePromptCard from "./prompCard.js";
+import getTimeOfDay from "./timeConvert.js";
 const search = document.getElementById("searchInput");
 generatePromptCard();
 const getData = async (searchInput = "") => {
@@ -10,6 +11,8 @@ const getData = async (searchInput = "") => {
   } else {
     const response = await fetchingData(searchInput);
     await generateWeatherUI(response);
+    const timeOfDay = await getTimeOfDay(response);
+    console.log(response);
     document.getElementsByClassName("warning-card")[0].remove();
   }
 };
